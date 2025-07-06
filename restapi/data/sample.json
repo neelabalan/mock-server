@@ -1,0 +1,44 @@
+[
+  {
+    "url": "/api/test",
+    "method": "GET",
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "message": "This is a test"
+      }
+    },
+    "delay": 300
+  },
+  {
+    "url": "/api/test",
+    "method": "POST",
+    "response": {
+      "status": 201,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "message": "Resource created"
+      }
+    },
+    "delay": 500
+  },
+  {
+    "url": "/api/testerror",
+    "method": "GET",
+    "response": {
+      "status": 403,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "message": "Some Error"
+      }
+    },
+    "delay": 2000
+  }
+]

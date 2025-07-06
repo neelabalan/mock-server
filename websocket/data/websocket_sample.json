@@ -1,0 +1,47 @@
+[
+  {
+    "path": "/chat",
+    "on_connect": {
+      "message": {
+        "type": "welcome",
+        "message": "Welcome to the chat!"
+      },
+      "delay": 100
+    },
+    "on_message": {
+      "message": {
+        "type": "echo",
+        "message": "Server received your message"
+      },
+      "delay": 200
+    }
+  },
+  {
+    "path": "/notifications",
+    "on_connect": {
+      "message": {
+        "type": "subscription",
+        "message": "Subscribed to notifications"
+      },
+      "delay": 50
+    }
+  },
+  {
+    "path": "/realtime",
+    "on_message": {
+      "message": {
+        "type": "ack",
+        "timestamp": "2025-01-01T00:00:00Z",
+        "data": "Real-time data update"
+      },
+      "delay": 0
+    },
+    "on_close": {
+      "message": {
+        "type": "goodbye",
+        "message": "Thanks for using real-time updates"
+      },
+      "delay": 0
+    }
+  }
+]
