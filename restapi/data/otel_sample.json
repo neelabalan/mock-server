@@ -1,0 +1,49 @@
+[
+  {
+    "url": "/users",
+    "method": "GET",
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "users": [
+          {"id": 1, "name": "John Doe"},
+          {"id": 2, "name": "Jane Smith"}
+        ]
+      }
+    },
+    "delay": 100
+  },
+  {
+    "url": "/users",
+    "method": "POST",
+    "response": {
+      "status": 201,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "id": 3,
+        "name": "New User",
+        "message": "User created successfully"
+      }
+    },
+    "delay": 200
+  },
+  {
+    "url": "/health",
+    "method": "GET",
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "status": "healthy",
+        "timestamp": "2025-01-01T00:00:00Z"
+      }
+    }
+  }
+]
